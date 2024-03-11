@@ -1,7 +1,8 @@
 {
-  "homepage": "https://coder-2k4.github.io/NewsBuzz",
   "name": "my-app",
   "version": "0.1.0",
+  "homepage": "https://coder-2k4.github.io/my-app",
+  "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -14,10 +15,12 @@
     "localtunnel" : "^9.6.7"
   },
   "scripts": {
-    "deploy": "gh-pages -d build",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    
+    "predeploy": "npm run build",
+   "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
